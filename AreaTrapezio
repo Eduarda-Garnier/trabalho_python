@@ -1,0 +1,12 @@
+print("-------------Calcule a área do trapézio-------------")
+
+B = float(input("Digite a base maior: "))
+b = float(input("Digite a base menor: "))
+h = float(input("Digite a altura: "))
+
+def areadoTrapezio():
+    area = ((B + b) * h) / 2
+    print(f"A área do trapezio é: {area}")
+
+areadoTrapezio()
+
