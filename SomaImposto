@@ -1,0 +1,33 @@
+import string
+
+print("Digite -1 para finalizar !!")
+
+contador = 0
+i = 0
+x = 0
+taxaImpostos = []
+taxaImposto = 0
+custos = []
+somas = []
+while(x < 1): 
+    taxaImposto = float(input("Quantos porcento será taxado de imposto por venda: "))
+    if taxaImposto == -1:
+        break
+    taxaImposto = taxaImposto / 100 + 1
+    
+    custo = float(input("Custo do produto: "))
+    taxaImpostos.append(taxaImposto)
+    custos.append(custo)
+    contador += 1
+
+print(f"Porcentagens de imposto: {taxaImpostos}")
+print(f"Produtos sem imposto: {custos}")
+
+def soma_imposto():
+    for i in range(contador):
+        soma = custos[i] * taxaImpostos[i]
+        somas.append(soma)
+    
+    print(f"Produtos com impostos: {somas}")
+
+soma_imposto()
