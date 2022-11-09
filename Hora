@@ -1,0 +1,25 @@
+print("Digite -1 para sair da operação!!")
+
+x = 0
+while x < 1: 
+    hora = int(input("Digite a hora atual: "))
+    if hora == -1:
+        break
+    minutos = int(input("Digite os minutos: "))
+    def converterHora(hora):
+        return (hora - 12)
+    
+    def imprimirHora(hora,minutos):
+        A = "AM"
+        P = "PM"
+        if(hora <= 12):
+            print(hora,minutos, A)
+        if (hora > 12):
+            print(converterHora(hora), minutos, P)
+    if (hora > 24):
+        print("Horário maior que 24 horas.")
+        break
+    if (minutos > 60):
+        print("Minuto maior que 60 minutos.")
+        break
+    imprimirHora(hora, minutos)  
